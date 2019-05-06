@@ -49,7 +49,7 @@ Ball.prototype.godie = function(){
 var ballsArr = []
 
 myCanvas.onmousemove = function(event){
-	console.log(event.clientX)
+	// console.log(event.clientX)
 	new Ball(event.clientX, event.clientY)
 }
 

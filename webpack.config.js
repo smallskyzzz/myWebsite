@@ -46,7 +46,19 @@ var config = {
 		// css的打包
         new ExtractTextPlugin('css/[name].css'), 
         new HtmlWebpackPlugin(getHtmlConfig('index'))
-    ]
+    ],
+    devServer: { // 跨域的配置
+        proxy: {
+            '/api/*': {
+                target: 'http://localhost:3000/',
+                pathRewrite: {
+                    '^/api': '/'
+                },
+                secure: true,
+                changeOrigin: true
+            }
+        }
+    }
 }
 
 module.exports = config

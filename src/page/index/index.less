@@ -36,5 +36,28 @@ body{
 				border-bottom: 2px solid aqua;
 			}
 		}
+		.content{
+			.note-item{
+				border-bottom: 1px solid aqua;
+				.title{
+					line-height: 30px;
+					font-size: 18px;
+					font-weight: bold;
+					color: aqua;
+				}
+				.note-content{
+					line-height: 50px;
+					padding-left: 20px;
+					font-size: 14px;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+			}
+			.note-item:hover{
+				border: 1px solid aqua;
+				cursor: pointer;
+			}
+		}
 	}
 }
